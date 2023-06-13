@@ -1,0 +1,93 @@
+<html>
+<head>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Memory</h1>
+    <br>
+    <lable id="timelable">Zeit:</lable><lable id="timer">0:00</lable>
+
+    <section id="einstellungen">
+      <form> 
+        <br> 
+          <lable class="anzahlspieler">Anzahl der Spieler</lable>
+        <br>
+          <input type="button" class="spielerbutton" value="1 Spieler" onclick="spieler(1)">
+          <input type="button" class="spielerbutton" value="2 Spieler" onclick="spieler(2)">
+          <input type="button" class="spielerbutton" value="3 Spieler" onclick="spieler(3)">
+          <input type="button" class="spielerbutton" value="4 Spieler" onclick="spieler(4)">
+
+        <br>
+        <br>
+          <lable class="anzahlkarten">Anzahl der Karten</lable>
+        <br>
+            <input type="radio" id="10" name="kartenzahl" value="10"><lable for="10">10</lable>
+            <input type="radio" id="12" name="kartenzahl" value="12"><lable for="12">12</lable>
+            <input type="radio" id="14" name="kartenzahl" value="14"><lable for="14">14</lable>
+            <input type="radio" id="16" name="kartenzahl" value="16"><lable for="16">16</lable>
+            <input type="radio" id="18" name="kartenzahl" value="18"><lable for="18">18</lable>
+        <br>
+            <input type="radio" id="20" name="kartenzahl" value="20"><lable for="20">20</lable>
+            <input type="radio" id="22" name="kartenzahl" value="22"><lable for="22">22</lable>
+            <input type="radio" id="24" name="kartenzahl" value="24"><lable for="24">24</lable>
+            <input type="radio" id="26" name="kartenzahl" value="26"><lable for="26">26</lable>
+            <input type="radio" id="28" name="kartenzahl" value="28"><lable for="28">28</lable>
+        <br>
+            <input type="radio" id="30" name="kartenzahl" value="30"><lable for="30">30</lable>
+            <input type="radio" id="32" name="kartenzahl" value="32"><lable for="32">32</lable>
+            <input type="radio" id="34" name="kartenzahl" value="34"><lable for="34">34</lable>
+            <input type="radio" id="36" name="kartenzahl" value="36" checked><lable for="36">36</lable>
+            <input type="radio" id="38" name="kartenzahl" value="38"><lable for="38">38</lable>
+        <br>
+            <input type="radio" id="40" name="kartenzahl" value="40"><lable for="40">40</lable>
+            <input type="radio" id="42" name="kartenzahl" value="42"><lable for="42">42</lable>
+            <input type="radio" id="44" name="kartenzahl" value="44"><lable for="44">44</lable>
+            <input type="radio" id="46" name="kartenzahl" value="46"><lable for="46">46</lable>
+            <input type="radio" id="48" name="kartenzahl" value="48"><lable for="48">48</lable>
+        <br>
+            <input type="radio" id="50" name="kartenzahl" value="50"><lable for="50">50</lable>
+        <br>
+        <br>
+            <input type="button" value="Start" onclick="startgame()">
+      </form>
+    </section>
+
+        <div id="spieler1" class="spieler">
+            <p>Spieler 1</p>
+            <p>Name:<input type="text" class="name" id="name1" minlength="3" maxlength="10" value="Spieler 1"></p>
+            <p id="f1">Flips: 0</p>
+            <p id="p1">Pairs: 0</p>
+        </div>
+       
+        <div id="spieler2" class="spieler">
+            <p>Spieler 2</p>
+            <p>Name:<input type="text" class="name" id="name2" minlength="3" maxlength="10" value="Spieler 2"></p>
+            <p id="f2">Flips: 0</p>
+            <p id="p2">Pairs: 0</p>
+        </div>
+
+        <div id="spieler3" class="spieler">
+            <p>Spieler 3</p>
+            <p>Name:<input type="text" class="name" id="name3" minlength="3" maxlength="10" value="Spieler 3"></p>
+            <p id="f3">Flips: 0</p>
+            <p id="p3">Pairs: 0</p>
+        </div>
+
+        <div id="spieler4" class="spieler">
+            <p>Spieler 4</p>
+            <p>Name:<input type="text" class="name" id="name4" minlength="3" maxlength="10" value="Spieler 4"></p>
+            <p id="f4">Flips: 0</p>
+            <p id="p4">Pairs: 0</p>
+        </div>
+
+        <p id="flip">Flips: 0</p>
+        <p id="paare">Paare: 0</p>
+    
+    <div id="feld"></div>
+
+    <input type="button" id="menu" value="Menü" onclick="reset()">
+    
+        
+    </body>
+    <script src="script.js"></script>
+</html>

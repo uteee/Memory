@@ -1,0 +1,208 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+@font-face{
+    font-family: "Morris";
+    src: url("MorrisRoman-Black.ttf");
+}
+  
+body{
+    background-image: url("img/karte.jpg");
+    background-size: 100vw, 100vh;
+    font-family: Morris;
+    font-size: 50px;
+ }
+  
+h1{
+    text-align: center;
+    font-size: 100px;
+    text-decoration: underline;
+}
+
+#einstellungen{
+    text-align: center;
+    display: inline-block;
+    margin-left: 22vw;
+}   
+
+.anzahlspieler, .anzahlkarten{
+    text-decoration: underline;
+}
+
+.spielerbutton{
+    margin: 20px;
+}
+
+.spieler, #flip, #paare, #timer, #timelable{
+    font-size: 30px;
+    width: 15vw;
+    margin-left: 10px;
+    margin-bottom: 10px;
+    display: none;
+    float: left;
+    clear: left;
+}
+
+.spieler{
+    border: 1px solid black;
+}
+
+#spieler1{background-color: rgb(114, 79, 79); display: list-item;}
+#spieler2{background-color: rgb(92, 128, 106);}
+#spieler3{background-color: rgb(94, 94, 79);}
+#spieler4{background-color: rgb(71, 72, 82);}
+
+input[type=radio] {
+    transform: scale(1.2);
+    vertical-align: middle;
+}
+
+input[type=button]{
+    transform: scale(1.7);
+    color: black;
+    font-size: 20px;
+    font-family: "Morris";
+}
+
+#menu{
+    margin-left: 30px;
+    clear: left;
+    display: list-item;
+}
+
+input[type=text]{
+    vertical-align: middle;
+}
+
+#game{
+    display: grid;
+    perspective: 1000px;
+}
+
+.karte{
+    position: relative;
+    margin: 5px;
+    transform-style: preserve-3d;
+    transition: transform .5s;
+}
+
+.karte:active{
+    transform: scale(0.96);
+    transition: transform .2s;
+}
+
+.rueckseite:hover{
+    outline: 1px solid rgb(88, 87, 73);
+}
+
+.karte.flip{
+    transform: rotateY(180deg);
+}
+
+.vorderseite, .rueckseite{
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+}
+
+.vorderseite{
+    transform: rotateY(180deg);
+}
+
+
+.game10 {grid-template-columns: repeat(5, 15.1vw);  margin-left: 20vw;}
+.game12 {grid-template-columns: repeat(4, 13.3vw);  margin-left: 30vw;}
+.game16 {grid-template-columns: repeat(4, 10vw);    margin-left: 30vw;}
+.game18 {grid-template-columns: repeat(6, 12.5vw);  margin-left: 20vw;}
+
+
+.game14, .game20    {grid-template-columns: repeat(7, 10.9vw);  margin-left: 20vw;}
+.game30, .game32    {grid-template-columns: repeat(8, 9.9vw);   margin-left: 20vw;}
+.game34, .game36    {grid-template-columns: repeat(9, 8.6vw);   margin-left: 20vw;}
+
+
+.game22, .game24, .game26, .game28{
+    grid-template-columns: repeat(7, 10vw); 
+     margin-left: 20vw;
+    }
+
+.game38, .game40, .game42, .game44, .game46, .game48, .game50{
+    grid-template-columns: repeat(10, 7.8vw); 
+    margin-left: 20vw;
+}
+
+
+
+[data-karte="karte10"]  {width: 14.5vw; height: 14.5vw;}
+[data-karte="karte12"]  {width: 12.8vw; height: 12.8vw;}
+[data-karte="karte16"]  {width: 9.5vw;  height: 9.5vw;}
+[data-karte="karte18"]  {width: 12vw;   height: 12vw;}
+
+
+[data-karte="karte14"],[data-karte="karte20"]   {width: 10.4vw; height: 10.4vw;}
+[data-karte="karte30"],[data-karte="karte32"]   {width: 9.4vw;  height: 9.4vw;}
+[data-karte="karte34"],[data-karte="karte36"]   {width: 8.1vw;  height: 8.1vw;}
+
+[data-karte="karte22"],[data-karte="karte24"],[data-karte="karte26"],[data-karte="karte28"]{
+    width: 9.5vw; 
+    height: 9.5vw;
+}
+
+[data-karte="karte38"],[data-karte="karte40"],[data-karte="karte42"],[data-karte="karte44"],[data-karte="karte46"],[data-karte="karte48"],[data-karte="karte50"]{
+    width: 7.3vw;
+    height: 7.3vw;
+}
+
+
+@media (max-width: 900px) {                         
+   
+    body{font-size: 25px;}
+    h1{font-size: 40px;}
+
+    #einstellungen{
+        display: inline;
+    }
+
+    .spieler, #flip, #paare, #timer, #timelable{
+        font-size: 20px;
+        width: 15vw;
+        margin-left: 10px;
+        margin-bottom: 10px;
+        display: none;
+        float: left;
+        clear: none;
+    }
+
+    input[type=radio]{
+        transform: scale(0.9);
+    }
+
+    input[type=button]{
+        transform: scale(1.2);
+        font-size: 20px;
+    }
+
+    input[type=text]{
+        transform: scale(0.7);
+        float: left;
+    }
+
+    .game10, .game12, .game14, .game16, .game18,
+    .game20, .game22, .game24, .game26, .game28,
+    .game30, .game32, .game34, .game36, .game38,
+    .game40, .game42, .game44, .game46, .game48,
+    .game50{
+        grid-template-columns: repeat(4,1);
+    }
+    /*Karte soll nicht wirklich so klein sein. War nur zum Test. Da es nicht funktioniert hat, konnte ich keine passende Größe festlegen*/
+    #karte{
+        width: 10px;
+        height: 10px;
+    }
+
+
+  }
