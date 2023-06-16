@@ -286,29 +286,26 @@ function turn1(){   //Anzeige dafür, dass bei Spielstart Spieler1 an der Reihe 
     document.getElementById("spieler4").style.borderWidth = "1px";
 }
 
-function timer(){   //Zählt Zeit hoch
-    var min    = 00;
-    var sec = 00;
-    var secplace = 0;           //Ist da, damit 08 anstatt 8 im Zähler steht
-    setInterval(function(){
-        sec++;
-        if(sec == 59){      //Bei 59 Sekunden wird sec 0 und die Minuten um 1 hochgezählt
-            sec = 00;
-            min = min + 1;
-        }
+var secplace = 0; 
+var min = 0;
+var sec = 0;
 
-        if(sec == 10){
-              secplace = "";
-        }
+function timer(){   //Zählt Zeit hoch  
+    sec++;
+    if(sec == 59){      //Bei 59 Sekunden wird sec 0 und die Minuten um 1 hochgezählt
+        sec = 0;
+        min = min + 1;
+    }
 
-        if(sec == 00){
-              secplace = 0;
-        }
+    if(sec == 10){
+        secplace = "";
+    }
 
-        document.getElementById("timer").innerText = min+':'+secplace+sec;
-    }, 1000); //Passiert jede Sekunde
+    if(sec == 0){
+        secplace = 0;
+    }
 
-    
+    document.getElementById("timer").innerText = min+':'+secplace+sec;
 }
 
 function startgame(){    //Klick auf Start
@@ -317,11 +314,8 @@ function startgame(){    //Klick auf Start
     namet();
     turn1();
     getcheckedValue();
-    timer();
+    time=window.setInterval('timer()',1000);
 }
-
-
-
 
 
 function getMenu(){     //Zeigt nach Reset, Klick auf Menü, die Einstellungen wieder an
@@ -376,6 +370,10 @@ function reset(){       //Klick auf Menü
     setzero();
     nodisplay();
     noturn();
+    window.clearInterval(time);
+    min = 0;
+    sec = 0;
+    document.getElementById("timer").innerText = '0:00';
 }
     
 
