@@ -110,7 +110,7 @@ function addFlip(){     //Funktion, damit jede Karte umgedreht werden kann.
     
             if(karte1.dataset.name === karte2.dataset.name)         //Beide Karten sind gleich
             {
-                document.getElementById("paare").innerHTML="Paare: "+paare;     //Anzahl der gefundenen Paare wird hochgezählt
+                document.getElementById("paare").innerHTML="Pairs: "+paare;     //Anzahl der gefundenen Paare wird hochgezählt
                 paare++;
 
                 //Anzahl der gefundenen Paare des Spielers, der an der Reihe ist, wird hochgezählt
@@ -334,19 +334,22 @@ function deleteField(){ //Löscht bei Reset das div game, in dem alle Karten sin
     game.remove()
 }
 
+var setzeroFilps = "Flips: 0"
+var setzeroPairs = "Pairs: 0"
+
 function setzero(){  //Zähler werden wieder auf 0 gesetzt und deren Anzeige verschwindet
-   document.getElementById("flip").innerHTML="Flips: 0";
-   document.getElementById("paare").innerHTML="Paare: 0";
+   document.getElementById("flip").innerHTML=setzeroFilps;
+   document.getElementById("paare").innerHTML=setzeroPairs;
 
-   document.getElementById("f1").innerHTML="Flips: 0";
-   document.getElementById("f2").innerHTML="Flips: 0";
-   document.getElementById("f3").innerHTML="Flips: 0";
-   document.getElementById("f4").innerHTML="Flips: 0";
+   document.getElementById("f1").innerHTML=setzeroFilps ;
+   document.getElementById("f2").innerHTML=setzeroFilps;
+   document.getElementById("f3").innerHTML=setzeroFilps;
+   document.getElementById("f4").innerHTML=setzeroFilps;
 
-   document.getElementById("p1").innerHTML="Paare: 0";
-   document.getElementById("p2").innerHTML="Paare: 0";
-   document.getElementById("p3").innerHTML="Paare: 0";
-   document.getElementById("p4").innerHTML="Paare: 0";
+   document.getElementById("p1").innerHTML=setzeroPairs;
+   document.getElementById("p2").innerHTML=setzeroPairs;
+   document.getElementById("p3").innerHTML=setzeroPairs;
+   document.getElementById("p4").innerHTML=setzeroPairs;
 }
 
 function nodisplay(){   //Timer, Versuche und Paare werden bei den Einstellungen nicht
