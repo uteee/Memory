@@ -1,7 +1,5 @@
 # Memory
 Studienarbeit Web-Client-Technologien SS2020
 
-<img src="https://github.com/uteee/Memory/assets/84023284/398d699e-36c6-4416-99b8-102a99903fa6" width="800" />
-<img src="https://github.com/uteee/Memory/assets/84023284/91846234-1b48-4d9a-beb6-db789ab54e8c" width="800" /> 
-
-
+<img src="https://github.com/uteee/Memory/assets/84023284/7495f44b-4044-413c-8978-71ab186b63c9" width="800" />
+<img src="https://github.com/uteee/Memory/assets/84023284/cb15d51a-d856-4926-863d-f67bc1d0f5f8" width="800" /> 
